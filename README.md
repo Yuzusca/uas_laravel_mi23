@@ -95,7 +95,7 @@ php artisan serve
 ```
 akses website di 127.0.0.1:8000
 
-👤 Cara Login Admin
+### 👤 Cara Login Admin
 Karena database masih kosong (fresh), kamu perlu mendaftar akun admin pertama kali:
 - Buka http://127.0.0.1:8000/daftar
 - Isi Nama, Email, dan Password.
@@ -103,7 +103,7 @@ Karena database masih kosong (fresh), kamu perlu mendaftar akun admin pertama ka
 - Masuk menggunakan email & password yang baru dibuat.
 - Selamat! Kamu sudah masuk ke Dashboard Admin.
 
-👨‍💻 Author
+### 👨‍💻 Author
 Yusuf Hidayat
 
 NIM: 2357401007
