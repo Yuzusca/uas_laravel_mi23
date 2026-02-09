@@ -6,9 +6,6 @@ Aplikasi ini memiliki dua sisi pengguna:
 1. **Frontend (Pengunjung):** Melihat katalog produk, filter kategori, dan detail item.
 2. **Backend (Admin):** Mengelola produk (CRUD), kategori, dan melihat statistik dashboard.
 
-![Screenshot Aplikasi](public/storage/screenshot-home.png) 
-*(Opsional: Ganti path ini dengan link gambar screenshot jika ada)*
-
 ---
 
 ## 🚀 Fitur Utama
