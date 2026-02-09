@@ -1,59 +1,114 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎮 RV Street OG - Game Store Catalog
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**RV Street OG** adalah aplikasi web katalog dan penjualan voucher game sederhana yang dibangun menggunakan Framework **Laravel 11**. Proyek ini dibuat untuk memenuhi tugas **UAS Pemrograman Framework**.
 
-## About Laravel
+Aplikasi ini memiliki dua sisi pengguna:
+1. **Frontend (Pengunjung):** Melihat katalog produk, filter kategori, dan detail item.
+2. **Backend (Admin):** Mengelola produk (CRUD), kategori, dan melihat statistik dashboard.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+![Screenshot Aplikasi](public/storage/screenshot-home.png) 
+*(Opsional: Ganti path ini dengan link gambar screenshot jika ada)*
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🚀 Fitur Utama
 
-## Learning Laravel
+-   **Halaman Depan Modern:** Menampilkan *Hot Products*, *New Arrivals*, dan Sidebar Kategori.
+-   **Katalog Produk:** Daftar produk lengkap dengan harga dan deskripsi.
+-   **Admin Dashboard:** Ringkasan jumlah User, Produk, dan Kategori.
+-   **Manajemen Produk (CRUD):** Admin bisa menambah, mengedit, menghapus produk, serta **upload gambar**.
+-   **Manajemen Kategori:** Mengelompokkan produk berdasarkan game.
+-   **Autentikasi:** Sistem Login & Register untuk Admin.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🛠️ Teknologi yang Digunakan
 
-## Laravel Sponsors
+-   **Backend:** Laravel 11 (PHP 8.2+)
+-   **Frontend:** Bootstrap 5, Blade Template
+-   **Database:** MySQL
+-   **Icons:** FontAwesome 6
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## ⚙️ Persyaratan Sistem (Prerequisites)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Sebelum menginstall, pastikan komputer Anda sudah terinstall:
 
-## Contributing
+-   **PHP** >= 8.2
+-   **Composer**
+-   **MySQL** (Bisa via XAMPP / Laragon)
+-   **Git**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 📥 Cara Install & Menjalankan (Step-by-Step)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Ikuti langkah-langkah berikut untuk menjalankan project ini di komputer lokal (localhost):
 
-## Security Vulnerabilities
+### 1. Clone Repository
+Buka terminal/CMD, lalu jalankan perintah:
+```
+git clone [[https://github.com/Yuzusca/uas_laravel_mi23.git]](https://github.com/Yuzusca/uas_laravel_mi23.git)
+cd uas_laravel_mi23
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 2. Install Dependencies
+Install semua library Laravel yang dibutuhkan:
+```
+composer install
+```
 
-## License
+### 3. Setup File Environment
+Salin file .env.example menjadi .env:
+```
+cp .env.example .env
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 4. Konfigurasi Database
+Buka file .env dengan text editor.
+Cari bagian database dan sesuaikan dengan settingan MySQL kamu (biasanya seperti ini):
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=uas_laravel  <-- Buat database baru dengan nama ini di phpMyAdmin
+DB_USERNAME=root
+DB_PASSWORD=
+```
+PENTING: Buat database kosong bernama uas_laravel di PhpMyAdmin
+
+### 5. Generate Key & Migrasi Database
+Jalankan perintah ini untuk membuat kunci enkripsi dan tabel database:
+```
+php artisan key:generate
+php artisan migrate
+```
+
+### 6. Setup Penyimpanan Gambar (PENTING!)
+Agar gambar produk yang di-upload bisa muncul di browser, jalankan:
+```
+php artisan storage:link
+```
+
+### 7. Jalankan Server
+Terakhir, jalankan server lokal Laravel:
+```
+php artisan serve
+```
+akses website di 127.0.0.1:8000
+
+👤 Cara Login Admin
+Karena database masih kosong (fresh), kamu perlu mendaftar akun admin pertama kali:
+- Buka http://127.0.0.1:8000/daftar
+- Isi Nama, Email, dan Password.
+- Setelah daftar, kamu akan otomatis diarahkan ke halaman Login.
+- Masuk menggunakan email & password yang baru dibuat.
+- Selamat! Kamu sudah masuk ke Dashboard Admin.
+
+👨‍💻 Author
+Yusuf Hidayat
+
+NIM: 2357401007
+Kelas: MI 23
+Kampus: Politeknik Piksi Input Serang
