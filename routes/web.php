@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\AdminProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +52,8 @@ Route::middleware('guest')->group(function () {
     Route::get('/admin/kategori/tambah', [KategoriController::class, 'create'])->name('kategori.create');
     Route::post('/admin/kategori', [KategoriController::class, 'store'])->name('kategori.store');
     Route::delete('/admin/kategori/{id}', [KategoriController::class, 'destroy'])->name('kategori.destroy');});
+
+    Route::get('/admin/produk', [AdminProdukController::class, 'index'])->name('admin.produk.index');
+    Route::get('/admin/produk/tambah', [AdminProdukController::class, 'create'])->name('admin.produk.create');
+    Route::post('/admin/produk', [AdminProdukController::class, 'store'])->name('admin.produk.store');
+    Route::delete('/admin/produk/{id}', [AdminProdukController::class, 'destroy'])->name('admin.produk.destroy');

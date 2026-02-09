@@ -23,7 +23,7 @@
                 <a class="nav-link active" href="{{ route('dashboard') }}">Beranda</a>
             </li>
             <li class="nav-item mb-2">
-                <a class="nav-link" href="#">Produk</a>
+                <a class="nav-link" href="{{ route('admin.produk.index') }}">Produk</a>
             </li>
             <li class="nav-item mb-2">
                 <a class="nav-link" href="{{ route('kategori.index') }}">Kategori</a>

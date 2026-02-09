@@ -17,7 +17,7 @@
         <h4 class="fw-bold mb-4 px-2">Kategori</h4>
         <ul class="nav flex-column">
             <li class="nav-item mb-2"><a class="nav-link" href="{{ route('dashboard') }}">Beranda</a></li>
-            <li class="nav-item mb-2"><a class="nav-link" href="#">Produk</a></li>
+            <a class="nav-link" href="{{ route('admin.produk.index') }}">Produk</a>
             <li class="nav-item mb-2"><a class="nav-link active" href="{{ route('kategori.index') }}">Kategori</a></li>
             <li class="nav-item mb-2"><a class="nav-link" href="#">User</a></li>
             <li class="nav-item mt-4">

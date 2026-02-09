@@ -39,8 +39,6 @@
                         <a class="nav-link {{ request()->routeIs('tentang') ? 'active' : '' }}" href="{{ route('tentang') }}">Tentang</a>
                     </li>
                     @auth
-                        <li class="nav-item"><a class="btn btn-primary btn-custom text-white" href="{{ route('dashboard') }}">Dashboard</a></li>
-                    @else
                         <li class="nav-item"><a class="btn btn-primary btn-custom text-white" href="{{ route('login') }}">Login Admin</a></li>
                     @endauth
                 </ul>

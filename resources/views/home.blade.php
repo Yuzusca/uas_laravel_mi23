@@ -12,7 +12,14 @@
     <div class="row mb-5">
         @foreach($hotProducts as $item)
         <div class="col-md-4 mb-3">
-            <div class="card h-100 shadow-sm border-0">
+            <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                <div class="bg-light d-flex align-items-center justify-content-center" style="height: 180px;">
+                    @if($item->gambar)
+                        <img src="{{ asset('storage/' . $item->gambar) }}" class="w-100 h-100" style="object-fit: cover;">
+                    @else
+                        <i class="fas fa-image fa-3x text-secondary"></i>
+                    @endif
+                </div>
                 <div class="card-body text-center">
                     <h5 class="fw-bold">{{ $item->nama_produk }}</h5>
                     <p class="text-primary fw-bold fs-5">Rp {{ number_format($item->harga, 0, ',', '.') }}</p>
@@ -27,7 +34,14 @@
     <div class="row mb-5">
         @foreach($newProducts as $item)
         <div class="col-md-4 mb-3">
-            <div class="card h-100 shadow-sm border-0">
+            <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                <div class="bg-light d-flex align-items-center justify-content-center" style="height: 180px;">
+                    @if($item->gambar)
+                        <img src="{{ asset('storage/' . $item->gambar) }}" class="w-100 h-100" style="object-fit: cover;">
+                    @else
+                        <i class="fas fa-image fa-3x text-secondary"></i>
+                    @endif
+                </div>
                 <div class="card-body text-center">
                     <span class="badge bg-success mb-2">BARU!</span>
                     <h5 class="fw-bold">{{ $item->nama_produk }}</h5>

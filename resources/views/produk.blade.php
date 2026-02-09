@@ -54,7 +54,13 @@
                 @forelse($produk as $item)
                 <div class="col-md-4 col-sm-6">
                     <div class="card product-card h-100 shadow-sm">
-                        <div class="img-placeholder"><i class="fas fa-image"></i></div>
+                        <div class="overflow-hidden bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                            @if($item->gambar)
+                                <img src="{{ asset('storage/' . $item->gambar) }}" class="w-100 h-100" style="object-fit: cover;" alt="{{ $item->nama_produk }}">
+                            @else
+                                <i class="fas fa-image fa-3x text-secondary"></i>
+                            @endif
+                        </div>
                         <div class="card-body d-flex flex-column">
                             <div class="mb-2">
                                 <span class="badge bg-light text-secondary border">{{ $item->kategori->nama_kategori ?? 'Umum' }}</span>
