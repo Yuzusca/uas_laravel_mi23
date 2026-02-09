@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-// Nanti kita akan pakai HomeController dan AdminController juga
-// use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\KategoriController;
 
@@ -13,20 +12,10 @@ use App\Http\Controllers\KategoriController;
 |--------------------------------------------------------------------------
 */
 
-// Soal No 2: Halaman Katalog (URL: http://localhost/katalog)
-Route::get('/katalog', function () {
-    return view('katalog'); // Pastikan file resources/views/katalog.blade.php ada
-})->name('katalog');
-
-// Redirect halaman awal (/) langsung ke katalog biar tidak bingung
-Route::get('/', function () {
-    return redirect()->route('katalog');
-});
-
-// Soal No 3: Halaman Tentang
-Route::get('/tentang', function () {
-    return view('tentang'); // Pastikan file resources/views/tentang.blade.php ada
-})->name('tentang');
+Route::get('/', [HomeController::class, 'index'])->name('home');         // Halaman Depan
+Route::get('/home', [HomeController::class, 'index']);                   // Alias untuk home
+Route::get('/produk', [HomeController::class, 'produk'])->name('produk'); // Halaman Semua Produk
+Route::get('/tentang', [HomeController::class, 'tentang'])->name('tentang');
 
 
 /*

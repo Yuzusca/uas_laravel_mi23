@@ -6,6 +6,7 @@
 </head>
 <body class="bg-light d-flex align-items-center justify-content-center" style="height: 100vh;">
 
+
     <div class="card shadow p-4 text-center" style="width: 350px;">
         <h2 class="mb-4 fw-bold">Login</h2>
 
@@ -33,7 +34,7 @@
             </div>
 
             <div class="d-flex justify-content-between align-items-center mt-4">
-                <a href="{{ url('/') }}" class="text-decoration-none">Kembali</a>
+                <a href="{{ url('/daftar') }}" class="text-decoration-none">Daftar Akun</a>
                 <button type="submit" class="btn btn-outline-dark fw-bold px-4">Login</button>
             </div>
         </form>
